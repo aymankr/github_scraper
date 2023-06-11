@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Repositories</title>
+</head>
+<body>
+    <h1>List of repositories</h1>
+    {% for repo in data %}
+    <div>
+        <h2><a href="{{ repo['html_url'] }}">{{ repo['full_name'] }}</a></h2>
+        <p>Description : {{ repo['description'] }}</p>
+        <p>Stars : {{ repo['stargazers_count'] }}</p>
+        <p>Open Issues : {{ repo['open_issues_count'] }}</p>
+        <p>Contributors : {{ repo['contributors_count'] }}</p>
+        <p>Last 5 issues : {{ repo['issues'] }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
